@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <title>CSS TASK 2</title>
+  <style>
+    
+    
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #eef2f3, #ffffff);
+    padding: 20px;
+    margin: 0;
+  }
+  .card {
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    background-color: #fff;
+    max-width: 700px;
+    margin: 30px auto;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  .card:hover {
+    transform: scale(1.02);
+  }
+  .card .image img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    margin-right: 25px;
+    border: 3px solid #ddd;
+    padding: 5px;
+    background: white;
+    object-fit: cover;
+  }
+  .card .info h2 {
+    margin-bottom: 12px;
+    color: #222;
+    font-size: 24px;
+  }
+  .card .info p {
+    color: #555;
+    line-height: 1.5;
+  }
+  .navbar {
+    background-color: #222;
+    padding: 12px 0;
+    margin: 20px 0;
+    border-radius: 8px;
+  }
+  .navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .navbar li {
+    margin: 0 20px;
+  }
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .navbar a:hover {
+    background-color: #444;
+    color: #ffcc00;
+  }
+  @media (max-width: 768px) {
+    .navbar ul {
+      flex-direction: column;
+      align-items: center;
+    }
+    .navbar li {
+      margin: 10px 0;
+    }
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+    gap: 20px;
+  }
+  .sidebar {
+    width: 220px;
+    padding: 20px;
+    background-color: #d3d3d3;
+    border-radius: 10px;
+    min-height: 200px;
+  }
+  .main-content {
+    flex-grow: 1;
+    padding: 30px;
+    background-color: #add8e6;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+  }
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+    .sidebar, .main-content {
+      width: 100%;
+    }
+  }
+  footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    border-radius: 10px;
+    font-size: 16px;
+  }
+</style>
+
+</head>
+
+<body>
+
+  <div class="card">
+    <div class="image">
+      <img src="https://c8.alamy.com/comp/2B07CG6/initial-letter-sa-logo-design-vector-template-sa-letter-logo-design-2B07CG6.jpg" alt="Profile Image">
+    </div>
+    <div class="info">
+      <h2>Soham Ahirrao</h2>
+      <p>Highly motivated (after three cups of coffee) and detail-oriented (unless it's Monday morning) B.Tech CSE student at ITM Skills University. Survived Class 12th at RADAV College like a true warrior 🛡️. Fluent in HTML, C++, and can totally "Google" JavaScript basics like a pro 🔥. On a mission to conquer the software development world, one Stack Overflow thread at a time 💻. Looking forward to learning from industry legends (and maybe becoming one... eventually 😎).</p>
+    </div>
+  </div>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="sidebar left"></div>
+    <div class="main-content">
+      Soham Ahirrao: a proud survivor of 12th grade from RADAV College and now a B.Tech CSE student at ITM Skills University 🚀. Specializes in HTML (professional tag closer), C++ (debugging nightmares), and basic JavaScript (aka the land of "undefined" errors) 🧠💻. With a dream to dive deep into software development, he's ready to soak wisdom from industry veterans while pretending to understand corporate buzzwords in meetings 🏢. Aspiring to turn late-night coding sessions and caffeine dependency into a thriving tech career someday! ☕👨‍💻
+    </div>
+    <div class="sidebar right"></div>
+  </div>
+
+  <footer style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">
+    &copy; 2025 All Rights Reserved by Soham Ahirrao.
+  </footer>
+
+</body>
+</html>
