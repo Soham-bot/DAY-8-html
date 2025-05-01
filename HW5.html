@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shape Outside Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding: 40px;
+    }
+
+    .circle {
+      float: left;
+      width: 200px;
+      height: 200px;
+      margin: 20px;
+      shape-outside: circle(50%);
+      -webkit-shape-outside: circle(50%);
+      shape-margin: 10px;
+      clip-path: circle(50%);
+      -webkit-clip-path: circle(50%);
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Golde33443.jpg/320px-Golde33443.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .text {
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="circle"></div>
+
+  <div class="text">
+    <p>
+      This is an example of the `shape-outside` CSS property. Notice how the text wraps around the circular shape of the floated image container. The `shape-outside` property allows you to define a custom shape around which inline content (like text) will wrap. In this case, we're using a circle to make the layout visually appealing and different from the usual rectangular box model.
+    </p>
+  </div>
+
+</body>
+</html>

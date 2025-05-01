@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Hover Gallery</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px;
+      font-family: sans-serif;
+      background: #f2f2f2;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      transition: all 0.5s ease;
+    }
+
+   
+
+   
+    .zoom-in:hover img {
+      transform: scale(1.2);
+    }
+
+   
+    .grayscale:hover img {
+      filter: grayscale(100%);
+    }
+
+    
+    .rotate:hover img {
+      transform: rotate(5deg) scale(1.1);
+    }
+
+    
+    .blur:hover img {
+      filter: blur(3px);
+    }
+
+  
+    .bright:hover img {
+      filter: brightness(1.4);
+    }
+
+ 
+    .overlay-text:hover img {
+      filter: brightness(0.5);
+    }
+
+    .overlay-text .text {
+      position: absolute;
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.9);
+      opacity: 0;
+      transition: 0.3s ease;
+      text-align: center;
+      z-index: 2;
+    }
+
+    .overlay-text:hover .text {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    
+    .slide-caption .text {
+      position: absolute;
+      bottom: -100%;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      width: 100%;
+      text-align: center;
+      padding: 1em;
+      transition: bottom 0.4s ease;
+    }
+
+    .slide-caption:hover .text {
+      bottom: 0;
+    }
+
+   
+    @media (max-width: 600px) {
+      .overlay-text .text,
+      .slide-caption .text {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1 style="text-align:center; margin-bottom:30px;">CSS Hover Image Gallery</h1>
+
+  <div class="gallery">
+    <div class="gallery-item zoom-in">
+      <img src="https://images.unsplash.com/photo-1745594151309-6c7d9172c7c3?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Zoom In">
+    </div>
+
+    <div class="gallery-item grayscale">
+      <img src="https://images.unsplash.com/photo-1745659601865-1af86dec8bcd?q=80&w=3164&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Grayscale">
+    </div>
+
+    <div class="gallery-item rotate">
+      <img src="https://images.unsplash.com/photo-1745669754254-c30c98e5f8b1?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Rotate">
+    </div>
+
+    <div class="gallery-item blur">
+      <img src="https://images.unsplash.com/photo-1745666606096-9776c7e71bf6?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Blur">
+    </div>
+
+    <div class="gallery-item bright">
+      <img src="https://plus.unsplash.com/premium_photo-1722811315374-130eab32eb85?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Brighten">
+    </div>
+
+    <div class="gallery-item overlay-text">
+      <img src="https://images.unsplash.com/photo-1742240434042-11a13f062673?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Overlay">
+      <div class="text">Hello There</div>
+    </div>
+
+    <div class="gallery-item slide-caption">
+      <img src="https://plus.unsplash.com/premium_photo-1736526595880-c4005e55124e?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Slide Caption">
+      <div class="text">Nice Slide!</div>
+    </div>
+  </div>
+
+</body>
+</html>
